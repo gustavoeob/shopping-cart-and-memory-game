@@ -1,0 +1,345 @@
+/* Product Cart */
+
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Maven+Pro:wght@400;600&family=Raleway:wght@100;200;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    height: auto;
+    background-image: url('https://images.pexels.com/photos/373289/pexels-photo-373289.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.body{
+    height: 100vh;
+}
+
+header {
+    background-image: url('https://images.pexels.com/photos/3289880/pexels-photo-3289880.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(10,10,10,0.3);
+}
+h3{
+    color: #f2f2f2;
+}
+a{
+    color: #fff;
+}
+nav a {
+    color: #fff;
+}
+nav {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px 0 60px;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+nav li span {
+    padding-left: 5px;
+}
+
+li a {
+    padding: 5px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;;
+}
+
+.cart ion-icon {
+   vertical-align: bottom;
+   font-size: 20px;
+   padding-right: 5px;
+}
+
+.cart a {
+    background-color: rgb(67, 158, 194);
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.products-header{
+    color: rgb(63, 63, 63);
+    display: flex;
+    margin: 1.5em 0;
+    font-size: 1.8em;
+    text-shadow: 1.5px 1.5px #fff;
+    justify-content: center;
+}
+
+.container,
+.container-products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding-bottom: 100px;;
+}
+
+img{
+    border-radius: 20px;
+
+}
+.image {
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.add-cart {
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+    background-color: #327fb3;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+.image:hover .cart1,
+.image:hover .cart2,
+.image:hover .cart3,
+.image:hover .cart4 {
+    bottom: 50px;
+    opacity: 1;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/* ----------------- CART PAGE --------------- */
+
+.container-products {
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container-products ion-icon {
+    font-size: 25px;
+    color: #519ed1;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.product-header {
+    width: 100%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgray;
+    margin: 0 auto;
+}
+
+.product-title {
+    width: 45%;
+}
+
+.price {
+    width: 15%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.total {
+    width: 10%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.products {
+    color: #327fb3;
+    text-shadow: 1.2px 1.2px rgb(0, 0, 0);
+}
+.product ion-icon {
+    cursor: pointer;
+    
+}
+
+.products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products img {
+    border-radius: 10px;
+    width: 75px;
+}
+
+.basketTotalContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.basketTotalTitle {
+    width: 30%;
+}
+
+.basketTotal {
+    width: 10%;
+}
+.product-container{
+    width: 100%;
+    display: flex;
+}
+
+@media(max-width: 500px) {
+    nav h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;;
+    }
+
+    .sm-hide {
+        display: none;;
+    }
+
+    .products,
+    .product-header {
+        justify-content: center;
+    }
+
+    .basketTotalContainer {
+        padding-right: 8%;
+      }
+    }
+
+    /* Game */
+    .gameTitle {
+        display: flex;
+        justify-content: center;
+        margin: 1.5em 0;
+        font-size:1.8em
+    }
+    #lives{
+        display: flex;
+        justify-content: center;
+        margin: 1.5em 0;
+        width: 100%;
+        gap: .75em;
+        font-size: 1.5em;
+        color: #4b4a4a;
+        text-shadow: .8px .8px #fff;
+    }
+   
+    .card{
+        position: relative;
+        transform-style: preserve-3d;
+        transition: all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: rgba(75, 75, 75, 0.2) 0px 5px 15px;
+        cursor: pointer;
+    }
+    .face,
+    .back{
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        position: absolute;
+        pointer-events: none;
+        cursor: pointer;
+    }
+    .back{
+        background:#203249;
+        backface-visibility: hidden;
+    }
+    .face{
+        transform: rotateY(-180deg)
+    }
+
+    section{
+        display: grid;
+        grid-template-columns: repeat(4, 11rem );
+        grid-template-rows: repeat(2, 14rem );
+        justify-content: center;
+        gap: 2em;
+        perspective: 800px
+    }
+    .toggleCard{
+        transform: rotateY(180deg);
+    }
+    #result{
+        width: 150px;
+        height: 30px;
+        background: #6c8ab3;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 35px auto;
+        box-shadow: #aab6be 1px 1px;
+        font-size: 18px;
+        cursor: pointer;
+        display: none;
+    }
+    #result:hover {
+        background: #516d94;
+
+    }
+    #refresh{
+        font-size: 20px;
+    }
